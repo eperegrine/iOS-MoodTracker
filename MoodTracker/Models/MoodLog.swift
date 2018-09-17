@@ -19,7 +19,9 @@ struct MoodLog {
     }
     
     var dateString: String {
-        return self.datetime.description
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "hh:mm a '-' dd/MM/YYYY"
+        return dateFormatter.string(from: self.datetime)
     }
     
     static func getSampleLogs() -> [MoodLog] {
