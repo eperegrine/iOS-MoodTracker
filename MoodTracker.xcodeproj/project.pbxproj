@@ -17,6 +17,8 @@
 		6AC1826D214FFAAE0096A879 /* MoodLogTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AC1826C214FFAAE0096A879 /* MoodLogTableViewCell.swift */; };
 		6AC18272214FFAFC0096A879 /* MoodsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AC18271214FFAFC0096A879 /* MoodsViewController.swift */; };
 		6AC18274214FFB0F0096A879 /* MoodsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AC18273214FFB0F0096A879 /* MoodsCollectionViewCell.swift */; };
+		6AC18277215000740096A879 /* Mood.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AC18276215000740096A879 /* Mood.swift */; };
+		6AC18279215002A10096A879 /* MoodLog.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AC18278215002A10096A879 /* MoodLog.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +46,8 @@
 		6AC1826C214FFAAE0096A879 /* MoodLogTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoodLogTableViewCell.swift; sourceTree = "<group>"; };
 		6AC18271214FFAFC0096A879 /* MoodsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoodsViewController.swift; sourceTree = "<group>"; };
 		6AC18273214FFB0F0096A879 /* MoodsCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoodsCollectionViewCell.swift; sourceTree = "<group>"; };
+		6AC18276215000740096A879 /* Mood.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mood.swift; sourceTree = "<group>"; };
+		6AC18278215002A10096A879 /* MoodLog.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoodLog.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,6 +89,7 @@
 		6AC18249214FF7F50096A879 /* MoodTracker */ = {
 			isa = PBXGroup;
 			children = (
+				6AC18275215000600096A879 /* Models */,
 				6AC1826E214FFAB50096A879 /* ViewControllers */,
 				6AC1824A214FF7F50096A879 /* AppDelegate.swift */,
 				6AC1824C214FF7F50096A879 /* ViewController.swift */,
@@ -130,6 +135,15 @@
 				6AC18273214FFB0F0096A879 /* MoodsCollectionViewCell.swift */,
 			);
 			path = Moods;
+			sourceTree = "<group>";
+		};
+		6AC18275215000600096A879 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				6AC18276215000740096A879 /* Mood.swift */,
+				6AC18278215002A10096A879 /* MoodLog.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -234,8 +248,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				6AC1826B214FFA9B0096A879 /* MoodLogViewController.swift in Sources */,
+				6AC18279215002A10096A879 /* MoodLog.swift in Sources */,
 				6AC18272214FFAFC0096A879 /* MoodsViewController.swift in Sources */,
 				6AC1826D214FFAAE0096A879 /* MoodLogTableViewCell.swift in Sources */,
+				6AC18277215000740096A879 /* Mood.swift in Sources */,
 				6AC1824D214FF7F50096A879 /* ViewController.swift in Sources */,
 				6AC1824B214FF7F50096A879 /* AppDelegate.swift in Sources */,
 				6AC18274214FFB0F0096A879 /* MoodsCollectionViewCell.swift in Sources */,

@@ -8,12 +8,20 @@
 
 import UIKit
 
-class MoodLogViewController: UIViewController {
+fileprivate let reuseableIdentifier = "MoodLogCell"
 
+class MoodLogViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+
+    //Outlets
+    @IBOutlet weak var MoodTableView: UITableView!
+    
+    let moodsLogs: [MoodLog] = MoodLog.getSampleLogs()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        MoodTableView.estimatedRowHeight = 100
+        MoodTableView.delegate = self
+        MoodTableView.dataSource = self
     }
 
     override func didReceiveMemoryWarning() {
@@ -21,15 +29,25 @@ class MoodLogViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    //MARK: Table View
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return 1
     }
-    */
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return moodsLogs.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        guard let vc = tableView.dequeueReusableCell(withIdentifier: reuseableIdentifier, for: indexPath) as? MoodLogTableViewCell else {
+            fatalError("Dequed cell is not TableViewCell")
+        }
+        vc.setMood(from: getLog(from: indexPath))
+        return vc
+    }
+    
+    func getLog(from ip: IndexPath) -> MoodLog {
+        return moodsLogs[ip.item]
+    }
 
 }

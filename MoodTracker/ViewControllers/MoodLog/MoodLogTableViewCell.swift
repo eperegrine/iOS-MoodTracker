@@ -10,15 +10,15 @@ import UIKit
 
 class MoodLogTableViewCell: UITableViewCell {
 
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        // Initialization code
-    }
-
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
+    //MARK: Outlets
+    @IBOutlet weak var EmojiLabel: UILabel!
+    @IBOutlet weak var RatingLabel: UILabel!
+    @IBOutlet weak var DateTimeLabel: UILabel!
+    
+    func setMood(from mood: MoodLog) {
+        EmojiLabel.text = mood.mood.emoji
+        RatingLabel.text = mood.ratingOutOfTen
+        DateTimeLabel.text = mood.dateString
     }
 
 }
