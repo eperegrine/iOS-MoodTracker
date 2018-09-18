@@ -123,7 +123,7 @@
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="jvm-Va-lwF">
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="MoodCell" id="jvm-Va-lwF" customClass="MoodsCollectionViewCell" customModule="MoodTracker" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="100" height="130"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
@@ -158,6 +158,10 @@
                                             <constraint firstAttribute="trailing" secondItem="jQI-X0-Km5" secondAttribute="trailing" id="iM3-NS-NLa"/>
                                             <constraint firstItem="jQI-X0-Km5" firstAttribute="top" secondItem="jvm-Va-lwF" secondAttribute="top" id="jQT-hi-N68"/>
                                         </constraints>
+                                        <connections>
+                                            <outlet property="EmojiLabel" destination="jQI-X0-Km5" id="x6V-Kv-gNh"/>
+                                            <outlet property="NameLabel" destination="pun-y0-2bL" id="kY8-7p-ZiY"/>
+                                        </connections>
                                     </collectionViewCell>
                                 </cells>
                             </collectionView>
@@ -175,6 +179,9 @@
                         <barButtonItem key="leftBarButtonItem" systemItem="edit" id="kTO-7T-IY2"/>
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="dR7-ck-lol"/>
                     </navigationItem>
+                    <connections>
+                        <outlet property="MoodsCollectionView" destination="Z20-ED-mz3" id="e1J-dU-1N5"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9Ip-br-QI4" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
